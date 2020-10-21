@@ -5,14 +5,19 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      classname: "para"
+      para: <p></p>
     };
   }
 
   handelClick = () => {
-    let classN = "enable";
+    let newPara = (
+      <p id="para">
+        Hello, I've learnt to use the full-stack evaluation tool. This makes me
+        so happy
+      </p>
+    );
     this.setState({
-      classname: classN
+      para: newPara
     });
   };
 
@@ -22,10 +27,7 @@ class App extends Component {
         <button id="click" onClick={this.handelClick}>
           Click
         </button>
-        <p className={this.state.classname} id="para">
-          Hello, I've learnt to use the full-stack evaluation tool. This makes
-          me so happy
-        </p>
+        {this.state.para}
       </div>
     );
   }
