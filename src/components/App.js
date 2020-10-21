@@ -11,7 +11,9 @@ class App extends Component {
 
   handelClick = () => {
     let classN = "enable";
-    this.setState((this.state.classname = classN));
+    this.setState({
+      classname: classN
+    });
   };
 
   render() {
