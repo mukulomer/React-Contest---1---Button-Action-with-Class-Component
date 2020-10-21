@@ -14,3 +14,10 @@ button{
 .bg-pink{
 	background-color:pink;
 }
+.para{
+    display: none;
+}
+
+.enable{
+    display: inline;
+}
