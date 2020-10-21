@@ -9,13 +9,6 @@ class App extends Component {
     };
   }
 
-  handelClick = () => {
-    let newPara = true;
-    this.setState({
-      para: newPara
-    });
-  };
-
   rederPara() {
     return (
       <p id="para">
@@ -28,7 +21,13 @@ class App extends Component {
   render() {
     return (
       <div id="main">
-        <button id="click" onClick={this.handelClick}>
+        Hello
+        <button
+          id="click"
+          onClick={() => {
+            this.setState({ para: true });
+          }}
+        >
           click
         </button>
         {this.state.para ? this.rederPara() : ""}
@@ -38,3 +37,14 @@ class App extends Component {
 }
 
 export default App;
+
+// render() {
+//   return (
+//     <div id="main">
+//       <button id="click" onClick={this.handelClick}>
+//         click
+//       </button>
+//       {this.state.para ? this.rederPara() : ""}
+//     </div>
+//   );
+// }
